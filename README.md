@@ -1,7 +1,7 @@
 # QAdmin
 
 + Linux Deploy: [![Build status ](https://travis-ci.org/netzulo/qadmin.svg?branch=master)](https://travis-ci.org/netzulo/qadmin)
-+ Windows Deploy: [![Build status](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)
++ Windows Deploy: [![Build status](https://ci.appveyor.com/api/projects/status/lyyahdb93h9dh9yl?svg=true)](https://ci.appveyor.com/api/projects/status/lyyahdb93h9dh9yl?svg=true)
 
 ## Prerequisites ?
 
