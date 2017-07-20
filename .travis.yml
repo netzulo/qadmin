@@ -1,0 +1,11 @@
+language: node
+before_install:
+  - echo "travis before_install"
+intall:
+  - echo "travis install"
+
+before_script:
+  - echo "before_script"
+
+script:
+  - echo "script"
