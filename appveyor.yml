@@ -1,16 +1,23 @@
-version: 1.0.{build}
+build: off
 branches:
   only:
     - master
-image: Visual Studio 2017
-clone_folder: c:\
-platform: Any CPU
-configuration: Release
-before_build:
+environment:
+  matrix:
+    - nodejs_version: "4"
+    - nodejs_version: "6"
+    allow_failures:
+      - nodejs_version: "7"
 
-before_package:
-  - echo "before_package"
-after_build:
-  - echo "after_build"
-build_script:
-  - echo "build_script"
+platform:
+  - x86
+  - x64
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+
+before_test:
+  - npm run ng build
+
+test_script:
+  - npm run ng test

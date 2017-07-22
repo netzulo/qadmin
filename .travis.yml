@@ -1,11 +1,16 @@
-language: node
+language: node_js
+node_js:
+  - "7"
+  - "6"
+  - "5"
+  - "iojs"
 before_install:
   - echo "travis before_install"
 intall:
-  - echo "travis install"
+  - npm install
 
 before_script:
-  - echo "before_script"
+  - npm run ng test
 
 script:
-  - echo "script"
+  - npm run ng build
