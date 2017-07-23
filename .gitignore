@@ -64,3 +64,6 @@ typings/
 # QADMIN
 
 dist/
+
+# Visual Studio
+.vs/
