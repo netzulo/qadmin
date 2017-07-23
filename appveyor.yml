@@ -16,7 +16,11 @@ install:
   - npm install
 
 before_test:
-  - npm run ng build
+  - npm run pree2e
+  - npm run ng serve& 
+  - sleep 30
+  - npm run e2e
 
 test_script:
+  - npm run ng build
   - echo "BUILD SUCCESS"
