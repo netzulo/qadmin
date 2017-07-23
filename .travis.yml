@@ -21,7 +21,7 @@ intall:
   - npm install
 
 before_script:
-  - npm run ng test
+  - npm run ng build
 
 script:
-  - npm run ng build
+  - echo "QADMIN BUILD SUCCESS"
