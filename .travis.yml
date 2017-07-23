@@ -21,7 +21,9 @@ intall:
   - npm install
 
 before_script:
-  - echo "TODO: npm run e2e"
+  - npm start &
+  - sleep 15
+  - npm run e2e
 
 script:
   - npm run ng build
