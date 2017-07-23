@@ -21,7 +21,7 @@ intall:
   - npm install
 
 before_script:
-  - npm run ng build
+  - npm run e2e
 
 script:
-  - echo "QADMIN BUILD SUCCESS"
+  - npm run ng build
