@@ -3,10 +3,10 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <SchemaVersion>2.0</SchemaVersion>
-        <ProjectGuid>{3e99ad32-6564-4377-b05f-335984c24f3a}</ProjectGuid>
-        <ProjectHome>src\</ProjectHome>
+        <ProjectGuid>{7bc79646-c72b-47b3-a857-5dfc6c1c9b6a}</ProjectGuid>
+        <ProjectHome />
         <ProjectView>ShowAllFiles</ProjectView>
-        <StartupFile>main.ts</StartupFile>
+        <StartupFile>protractor.conf.js</StartupFile>
         <WorkingDirectory>.</WorkingDirectory>
         <OutputPath>.</OutputPath>
         <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
@@ -19,25 +19,45 @@
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
     <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
     <ItemGroup>
-        <Content Include="index.html" />
-        <Content Include="styles.css" />
-        <Content Include="favicon.ico" />
-        <Content Include="tsconfig.json" />
-        <TypeScriptCompile Include="main.ts" />
-        <TypeScriptCompile Include="polyfills.ts" />
-        <TypeScriptCompile Include="test.ts" />
-        <Content Include="app\app.component.html" />
-        <Content Include="app\app.component.css" />
-        <TypeScriptCompile Include="app\app.component.spec.ts" />
-        <TypeScriptCompile Include="app\app.component.ts" />
-        <TypeScriptCompile Include="app\app.module.ts" />
-        <TypeScriptCompile Include="environments\environment.prod.ts" />
-        <TypeScriptCompile Include="environments\environment.ts" />
+        <Content Include="angular-cli.json" />
+        <Content Include="package.json" />
+        <Content Include="tslint.json" />
+        <Content Include="README.md" />
+        <Compile Include="karma.conf.js" />
+        <Compile Include="protractor.conf.js" />
+        <Content Include="dist\index.html" />
+        <Content Include="dist\favicon.ico" />
+        <Compile Include="dist\inline.bundle.js" />
+        <Compile Include="dist\main.bundle.js" />
+        <Compile Include="dist\polyfills.bundle.js" />
+        <Compile Include="dist\styles.bundle.js" />
+        <Compile Include="dist\vendor.bundle.js" />
+        <Content Include="e2e\tsconfig.json" />
+        <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
+        <TypeScriptCompile Include="e2e\app.po.ts" />
+        <Content Include="src\index.html" />
+        <Content Include="src\styles.css" />
+        <Content Include="src\favicon.ico" />
+        <Content Include="src\tsconfig.json" />
+        <TypeScriptCompile Include="src\main.ts" />
+        <TypeScriptCompile Include="src\polyfills.ts" />
+        <TypeScriptCompile Include="src\test.ts" />
+        <Content Include="src\app\app.component.html" />
+        <Content Include="src\app\app.component.css" />
+        <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+        <TypeScriptCompile Include="src\app\app.component.ts" />
+        <TypeScriptCompile Include="src\app\app.module.ts" />
+        <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+        <TypeScriptCompile Include="src\environments\environment.ts" />
     </ItemGroup>
     <ItemGroup>
-        <Folder Include="app" />
-        <Folder Include="assets" />
-        <Folder Include="environments" />
+        <Folder Include="dist" />
+        <Folder Include="e2e" />
+        <Folder Include="qadmin" />
+        <Folder Include="src" />
+        <Folder Include="src\app" />
+        <Folder Include="src\assets" />
+        <Folder Include="src\environments" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
     <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
