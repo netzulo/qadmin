@@ -16,8 +16,8 @@ install:
   - npm install
 
 before_test:
-  - npm run pree2e
+  - "npm run pree2e"
 
 test_script:
-  - npm run ng build
+  - "npm run ng build"
   - echo "BUILD SUCCESS"
