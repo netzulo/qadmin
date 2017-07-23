@@ -13,7 +13,7 @@ platform:
   - x64
 
 install:
-  - ps: Install-Product node $env:nodejs_version $env:platform
+  - npm install
 
 before_test:
   - npm run ng build
