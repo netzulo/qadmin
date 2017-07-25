@@ -3,8 +3,6 @@
 + Linux Deploy: [![Build status ](https://travis-ci.org/netzulo/qadmin.svg?branch=master)](https://travis-ci.org/netzulo/qadmin)
 + Windows Deploy: [![Build status](https://ci.appveyor.com/api/projects/status/qrb3o3qdeg3qv9eq?svg=true)](https://ci.appveyor.com/project/netzulo/qadmin)
 
-
-
 ## Prerequisites ?
 
 + 1. Installed Node v6 or later
