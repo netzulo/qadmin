@@ -1,6 +1,7 @@
 branches:
   only:
   - master
+  - devel
 sudo: required
 dist: trusty
 addons:

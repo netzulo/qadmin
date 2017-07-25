@@ -2,6 +2,7 @@ build: off
 branches:
   only:
     - master
+    - devel
 environment:
   matrix:
     - nodejs_version: "4"
