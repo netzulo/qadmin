@@ -1,7 +1,9 @@
 # Qadmin
 
-+ Linux Deploy: [![Build status ](https://travis-ci.org/netzulo/qadmin.svg?branch=master)](https://travis-ci.org/netzulo/qadmin)
-+ Windows Deploy: [![Build status](https://ci.appveyor.com/api/projects/status/qrb3o3qdeg3qv9eq?svg=true)](https://ci.appveyor.com/project/netzulo/qadmin)
+| Branch  | Linux Deploy | Windows Deploy |
+| ------------- | ------------- |  ------------- |
+| master  | [![Build Status](https://travis-ci.org/netzulo/qadmin.svg?branch=master)](https://travis-ci.org/netzulo/qadmin)  | [![Build status](https://ci.appveyor.com/api/projects/status/qrb3o3qdeg3qv9eq/branch/master?svg=true)](https://ci.appveyor.com/project/netzulo/qadmin/branch/master)  |
+| devel  | [![Build Status](https://travis-ci.org/netzulo/qadmin.svg?branch=devel)](https://travis-ci.org/netzulo/qadmin)  | [![Build status](https://ci.appveyor.com/api/projects/status/qrb3o3qdeg3qv9eq/branch/devel?svg=true)](https://ci.appveyor.com/project/netzulo/qadmin/branch/devel)  |
 
 ## Prerequisites ?
 
