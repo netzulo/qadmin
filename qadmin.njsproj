@@ -24,6 +24,9 @@
     <Content Include="angular-cli.json" />
     <Content Include="appveyor.yml" />
     <Content Include="package.json" />
+    <Content Include="sonar-project.properties">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\app\main-menu\main-menu.component.css" />
     <Content Include="src\app\main-menu\main-menu.component.html" />
     <Content Include="tslint.json" />
