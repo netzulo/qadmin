@@ -5,7 +5,10 @@ export class QadminPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getText(selector: string) {
+    return element(by.css(selector)).getText();
+  }
+  getAttribute(selector: string, attr: string) {
+    return element(by.css(selector)).getAttribute(attr);
   }
 }
