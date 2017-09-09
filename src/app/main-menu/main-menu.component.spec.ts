@@ -22,6 +22,19 @@ describe('MainMenuComponent', () => {
     fixture.detectChanges();
   });
 
+  it(`should have as title 'QAdmin'`, async(() => {
+    const fixture = TestBed.createComponent(MainMenuComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('QAdmin');
+  }));
+
+  it('should render title in a element with id=main-menu-title', async(() => {
+    const fixture = TestBed.createComponent(MainMenuComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('#main-menu-title').textContent).toContain('QAdmin');
+  }));
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
