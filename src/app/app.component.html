@@ -1,8 +1,10 @@
 <header id="mainHeader" class="row">
-  <app-main-menu class="col-lg-12"></app-main-menu>
-  <h1 class="col-lg-12">{{title}}</h1>
+  <main-menu class="col-lg-12"></main-menu>  
 </header>
-<section id="mainSection" class="row">
-  <p>Main section on app-root</p>
+<section id="mainSection" class="row justify-content-md-center">
+    <figure class="figure text-center col-12 col-md-auto">
+        <img id="description_url" src="{{description_url}}" class="figure-img img-fluid rounded" alt="Image not loaded">
+        <figcaption id="description_txt" class="figure-caption">{{description_txt}}</figcaption>
+    </figure>
 </section>
 <footer id="mainFooter" class="row"></footer>
