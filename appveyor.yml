@@ -1,4 +1,3 @@
-build: off
 branches:
   only:
     - master
@@ -10,6 +9,8 @@ environment:
 platform:
   - x86
   - x64
+before_install:
+  - "npm install -g angular-cli"
 install:
   - "npm install"
 before_test:
