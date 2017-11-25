@@ -1,14 +1,11 @@
-import { browser, element, by } from 'protractor';
+import { browser, by, element } from 'protractor';
 
-export class QadminPage {
+export class AppPage {
   navigateTo() {
     return browser.get('/');
   }
 
-  getText(selector: string) {
-    return element(by.css(selector)).getText();
-  }
-  getAttribute(selector: string, attr: string) {
-    return element(by.css(selector)).getAttribute(attr);
+  getParagraphText() {
+    return element(by.css('app-root h1')).getText();
   }
 }
