@@ -24,6 +24,11 @@
     <Content Include="angular-cli.json" />
     <Content Include="appveyor.yml" />
     <Content Include="package.json" />
+    <Content Include="sonar-project.properties">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\app\main-menu\main-menu.component.css" />
+    <Content Include="src\app\main-menu\main-menu.component.html" />
     <Content Include="tslint.json" />
     <Content Include="README.md" />
     <Compile Include="karma.conf.js" />
@@ -35,6 +40,8 @@
     <Content Include="src\styles.css" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\tsconfig.json" />
+    <TypeScriptCompile Include="src\app\main-menu\main-menu.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\main-menu\main-menu.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\test.ts" />
@@ -48,9 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="e2e" />
-    <Folder Include="qadmin" />
     <Folder Include="src" />
     <Folder Include="src\app" />
+    <Folder Include="src\app\main-menu\" />
     <Folder Include="src\assets" />
     <Folder Include="src\environments" />
   </ItemGroup>

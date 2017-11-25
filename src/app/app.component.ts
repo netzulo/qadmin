@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MainMenuComponent } from './main-menu/main-menu.component';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "Qadmin web panel it\'s working";
+  title = 'app';
 }

@@ -5,19 +5,19 @@ branches:
     - devel
 environment:
   matrix:
-    - nodejs_version: "4"
-    - nodejs_version: "6"
+    - nodejs_version: "8"
     - nodejs_version: "7"
-
+    - nodejs_version: "6"
 platform:
   - x86
   - x64
-
 install:
-  - npm install
-
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
+  - "npm install"
 before_test:
-  - "npm run pree2e"
-
+  - "node --version"
+  - "npm --version"
+  - "npm run build"
 test_script:
-  - echo "BUILD SUCCESS"
+  - "npm run e2e"
