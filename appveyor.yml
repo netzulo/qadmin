@@ -11,10 +11,9 @@ environment:
 platform:
   - x86
   - x64
-before_build:
+build_script:
   - "node -v"
   - "npm -v"
-build_script:
   - "npm install"
 before_test:
   - "npm run build"
