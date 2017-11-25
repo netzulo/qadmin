@@ -14,7 +14,6 @@ platform:
 before_build:
   - "node -v"
   - "npm -v"
-  - "npm install -g @angular/cli"
 build_script:
   - "npm install"
 before_test:
