@@ -9,7 +9,7 @@
 <section id="mainSection row">
   <div class="col-md-4 col-md-offset-4">
     <!--TODO: make click redirect to /login route and load page login-->
-    <button id="goLogin" class="btn btn-block btn-primary">Login</button>
+    <button id="goLogin" (click)="onClick($event)" class="btn btn-block btn-primary">Login</button>
   </div>
 </section>
 <footer id="mainFooter row"></footer>
