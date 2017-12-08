@@ -1,8 +1,15 @@
-<header id="mainHeader" class="app-title">
-    <h1>{{ title }}</h1>
-    <blockquote>
-        <strong>Imagination</strong> is <em>more important</em> than <strong>knowledge</strong>
-    </blockquote>
+<header id="mainHeader" class="app-title row">
+    <div class="col-md-12">
+      <h1>{{ title }}</h1>
+      <blockquote>
+          <strong>Imagination</strong> is <em>more important</em> than <strong>knowledge</strong>
+      </blockquote>
+    </div>
 </header>
-<section id="mainSection"></section>
-<footer id="mainFooter"></footer>
+<section id="mainSection row">
+  <div class="col-md-4 col-md-offset-4">
+    <!--TODO: make click redirect to /login route and load page login-->
+    <button id="goLogin" (click)="onClick($event)" class="btn btn-block btn-primary">Login</button>
+  </div>
+</section>
+<footer id="mainFooter row"></footer>
