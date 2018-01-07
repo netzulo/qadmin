@@ -1,6 +1,6 @@
 {
   "name": "qadmin",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
