@@ -7,8 +7,8 @@ describe('qadmin App', () => {
     page = new AppPage();
   });
 
-  it('should display QAdmin title message', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('QAdmin');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
