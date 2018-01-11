@@ -1,3 +1,4 @@
+dist: precise
 env:
   global:
 # SONAR_GITHUB_TOKEN
@@ -26,14 +27,15 @@ before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 intall:
+- npm run lint .\src\*.ts .\src\*.spec.ts
 - npm install
 before_script:
-- npm run build
+- node --version
+- npm --version
 script:
 - npm start &
-- sleep 10
+- sleep 25
 - npm run e2e
-
 after_script:
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
       sonar-scanner -X -Dsonar.login=${SONAR_GITHUB_TOKEN} -Dsonar.host.url=http://qalab.tk:82 ;

@@ -4,5 +4,10 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  router_debug: true,
+  admins: [
+    { id: 0, name: 'admin', pass: 'admin' },
+    { id: 1, name: 'qadmin', pass: 'qadmin' }
+  ]
 };
