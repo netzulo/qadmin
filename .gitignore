@@ -43,3 +43,6 @@ Thumbs.db
 
 # lock package
 package-lock.json
+
+# Visual code files
+.vscode

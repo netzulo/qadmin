@@ -1,20 +1,4 @@
-dist: precise
-env:
-  global:
-# SONAR_GITHUB_TOKEN
-  - secure: "co7HHM5Za4yxIkK5sO1+HXmD4+bFlg7EehXzAA9fl8+jcrrnitELUcXr7blqIJta+e8jJAoBzHwj4gCN9y4FcZd5RkrAV87imN7tvZO1SagEO07x3YzESasKT7avL9otzmWrkIMQP8+CD4Sl71gPfJ4RmMxouVMPOQLNdSNDA401klh/8nFPbDxsIWvCq1FoKCm3owYW7GJk22t0LowfJQvCcc6IUyjVHskWq/s+2JeS7PlEVFM+qiyXUKk2M5r+war6aZZoI0crp5jgpNZf4xMI+Od02oCYbhPqmwSwOVocf0849od2yAfT8fIpcvl1zGbaxBj74IFAHpY3UX4gHJUZfBBBAm7dhyq0ESseKaxhGU5LlOMnzsOl1rPkNrU04oYF3PD+itrIBQq1KxmxosTazlV1NK59i7hqSg7YHu4C6g0aBbcavY42s7i+S5YOhG6iinp5DZ4rheWlHmnaBM2R9LiXDtqK2I4P2kbdxGdWvBHkjomoUD02zJm7rhC7NFqcgT3BaLpuWmgueXngB6e2TxGgyC36zT8bUIfm7cxPuCwJY+05/ZuoFxZPg/UPFpPpU1aCKDaNho0R6CR3LdsZRk9yOX2DOi8R2wljSZZ9xRWpiJXqVWArnA0aLeImxXVoT6kV0LpFsRtadlZUSmEaR5d9H4JUrGSCv0jwu+Q="
-# GITHUB_TOKEN
-  - secure: "a7Re5IS6eWdjOt43g7RrY5obZir/7MOIFTNe2FZl+yvA6i+8Ohu3DPA2GgVn2NYgy2VDoi8PbjCbAEJg8UyKVVesuSgjTfbYDnjIKT5rwz2v3qaNLxjZyddRC7dgFURiBxkbv87oik21TtecuFfgVilEBMx1bOx/qQ8ZwKpKUQjjDRvmJ/HLGGY4poMfmH0MnAzTBTUMTCvKuNn93L3Vk5/Q3/Sx4l1nw1/+BdYqmmxPxFrhgEeeJ6XAgp+Ht/YXg5NJQuoIGyIqkHD4OOiK9Q3OM2c0TpkNUWPndj3Yh/8DvI8RRXWl26RBya6RafmPTfeHJL/Dw1cBPiA+AdTxaxdxJIrlYd6sHhRG/PBem5jLmm1d95epaDFC4Dquf+lOZf6e6BCuW+V9urG4N6PKtKGRCJ0NCYp5/SIssGd8mHHNgoWk6P6lCNWTGH8cA7l2yHL/gwNCFCLcIeN35GaHLO2abaqXctQwg/0b9uAzzARZoEEa50qrPm5wCHSSgLxXCitUkwN4CvAGw4M79mPC9JTkElJNw9+THKHD1Rw6Q0E241EcRVmi2HzORAGpALNSVuC/6zgShiPVMJuJlXOmxdhnepTYBvA7PsSPBszoNnkl22W/tMDbWefDc7bqJbZPOqz4P1mWYMdf8WNNY6zD3U60TqQWssXrQjXLJqtRIFE="
-addons:
-  apt:
-    sources:
-    - google-chrome
-    packages:
-    - google-chrome-stable
-addons:
-  sonarqube:
-    branches:
-    - master
+---
 language: node_js
 node_js:
 - "node"
@@ -22,20 +6,41 @@ node_js:
 - "8"
 - "7"
 - "6"
+
+sudo: false
+dist: trusty
+env:
+  global:
+# SONAR_GITHUB_TOKEN
+  - secure: "co7HHM5Za4yxIkK5sO1+HXmD4+bFlg7EehXzAA9fl8+jcrrnitELUcXr7blqIJta+e8jJAoBzHwj4gCN9y4FcZd5RkrAV87imN7tvZO1SagEO07x3YzESasKT7avL9otzmWrkIMQP8+CD4Sl71gPfJ4RmMxouVMPOQLNdSNDA401klh/8nFPbDxsIWvCq1FoKCm3owYW7GJk22t0LowfJQvCcc6IUyjVHskWq/s+2JeS7PlEVFM+qiyXUKk2M5r+war6aZZoI0crp5jgpNZf4xMI+Od02oCYbhPqmwSwOVocf0849od2yAfT8fIpcvl1zGbaxBj74IFAHpY3UX4gHJUZfBBBAm7dhyq0ESseKaxhGU5LlOMnzsOl1rPkNrU04oYF3PD+itrIBQq1KxmxosTazlV1NK59i7hqSg7YHu4C6g0aBbcavY42s7i+S5YOhG6iinp5DZ4rheWlHmnaBM2R9LiXDtqK2I4P2kbdxGdWvBHkjomoUD02zJm7rhC7NFqcgT3BaLpuWmgueXngB6e2TxGgyC36zT8bUIfm7cxPuCwJY+05/ZuoFxZPg/UPFpPpU1aCKDaNho0R6CR3LdsZRk9yOX2DOi8R2wljSZZ9xRWpiJXqVWArnA0aLeImxXVoT6kV0LpFsRtadlZUSmEaR5d9H4JUrGSCv0jwu+Q="
+# GITHUB_TOKEN
+  - secure: "a7Re5IS6eWdjOt43g7RrY5obZir/7MOIFTNe2FZl+yvA6i+8Ohu3DPA2GgVn2NYgy2VDoi8PbjCbAEJg8UyKVVesuSgjTfbYDnjIKT5rwz2v3qaNLxjZyddRC7dgFURiBxkbv87oik21TtecuFfgVilEBMx1bOx/qQ8ZwKpKUQjjDRvmJ/HLGGY4poMfmH0MnAzTBTUMTCvKuNn93L3Vk5/Q3/Sx4l1nw1/+BdYqmmxPxFrhgEeeJ6XAgp+Ht/YXg5NJQuoIGyIqkHD4OOiK9Q3OM2c0TpkNUWPndj3Yh/8DvI8RRXWl26RBya6RafmPTfeHJL/Dw1cBPiA+AdTxaxdxJIrlYd6sHhRG/PBem5jLmm1d95epaDFC4Dquf+lOZf6e6BCuW+V9urG4N6PKtKGRCJ0NCYp5/SIssGd8mHHNgoWk6P6lCNWTGH8cA7l2yHL/gwNCFCLcIeN35GaHLO2abaqXctQwg/0b9uAzzARZoEEa50qrPm5wCHSSgLxXCitUkwN4CvAGw4M79mPC9JTkElJNw9+THKHD1Rw6Q0E241EcRVmi2HzORAGpALNSVuC/6zgShiPVMJuJlXOmxdhnepTYBvA7PsSPBszoNnkl22W/tMDbWefDc7bqJbZPOqz4P1mWYMdf8WNNY6zD3U60TqQWssXrQjXLJqtRIFE="
+
+addons:
+  chrome: stable
+  sonarqube:
+    branches:
+    - master
+cache:
+  directories:
+    - $HOME/.npm
+
+env:
+  global:
+    # See https://git.io/vdao3 for details.
+    - JOBS=1
+
 before_install:
-- export CHROME_BIN=chromium-browser
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
+  - npm config set spin false
 intall:
-- npm run lint .\src\*.ts .\src\*.spec.ts
-- npm install
+  - npm install
+  - npm run lint:js
+  - npm run build
 before_script:
 - node --version
 - npm --version
 script:
-- npm start &
-- sleep 25
-- npm run e2e
+  - npm test
 after_script:
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
       sonar-scanner -X -Dsonar.login=${SONAR_GITHUB_TOKEN} -Dsonar.host.url=http://qalab.tk:82 ;

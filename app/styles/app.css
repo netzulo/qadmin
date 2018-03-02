@@ -1,0 +1,9 @@
+/*
+  URL:/settings
+*/
+.label-setting {}
+.label-setting:after {
+    content: attr(data-separator)
+}
+
+.input-setting {}

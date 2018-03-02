@@ -14,8 +14,10 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   - "npm install"
+  - "npm run lint:js"
+  - "npm run build"
 before_test:
   - "node --version"
   - "npm --version"
 test_script:
-  - "npm run e2e"
+  - "npm test"
