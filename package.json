@@ -1,7 +1,7 @@
 {
   "name": "qadmin",
   "version": "0.0.8",
-  "private": true,
+  "private": false,
   "description": "Small description for qadmin goes here",
   "license": "MIT",
   "author": "",
