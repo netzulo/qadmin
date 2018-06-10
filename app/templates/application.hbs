@@ -1,11 +1,21 @@
-<nav>
-    <ul>
-        <li>{{#link-to "index"}}Home{{/link-to}}</li>
-        <li>Projects</li>
-        <li>Version Notes</li>
-        <li>{{#link-to "settings"}}Settings{{/link-to}}</li>
-    </ul>
-</nav>
-
+{{#bs-navbar type=(if inverse 'inverse') fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    {{#link-to "index" class="navbar-brand"}}QAdmin{{/link-to}}
+  </div>
+  {{#navbar.content}}
+    {{#navbar.nav as |nav|}}
+      {{#nav.item}}{{#nav.link-to "index"}}Home{{/nav.link-to}}{{/nav.item}}
+      {{#nav.item}}{{#nav.link-to "settings"}}Settings{{/nav.link-to}}{{/nav.item}}
+      {{#nav.dropdown as |dd|}}
+        {{#dd.toggle}}Projects <span class="caret"></span>{{/dd.toggle}}
+        {{#dd.menu as |ddm|}}
+          {{#ddm.item}}{{#ddm.link-to "qalab"}}QAlab{{/ddm.link-to}}{{/ddm.item}}
+          {{#ddm.item}}{{#ddm.link-to "qacode"}}QAcode{{/ddm.link-to}}{{/ddm.item}}
+        {{/dd.menu}}
+      {{/nav.dropdown}}
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}
 
 {{outlet}}

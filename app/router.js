@@ -8,6 +8,11 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('settings');
+  this.route('qacode');
+  this.route('qacode-form-login');
+  this.route('qacode-form-logout');
+  this.route('qacode-form-inputs');
+  this.route('qalab');
   this.route('not-found', { path: '/*path' });
 });
 
