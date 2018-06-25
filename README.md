@@ -88,7 +88,7 @@ server {
        listen [::]:2443 ssl http2 default_server;
        include snippets/self-signed.conf;
        include snippets/ssl-params.conf;
-        root /your/path/dist;
+       root /your/path/dist;
 }
 ```
 
