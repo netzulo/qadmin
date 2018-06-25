@@ -71,7 +71,27 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+For NGINX web server you can use this example file , don't forget to create link at `sites-enabled` directory :
+
+```
+# config name: etc/nginx/sites-available/qadmin
+# port HTTP : 83
+# port HTTPS : 2443
+# path HTML files : /your/path/dist
+server {
+       listen 83 default_server;
+       listen [::]:83 default_server;
+
+       server_name mydomainorip.tk;
+
+       listen 2443 ssl http2 default_server;
+       listen [::]:2443 ssl http2 default_server;
+       include snippets/self-signed.conf;
+       include snippets/ssl-params.conf;
+        root /your/path/dist;
+}
+```
+
 
 ## Further Reading / Useful Links
 
