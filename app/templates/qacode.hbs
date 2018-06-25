@@ -1,14 +1,19 @@
-{{#bs-nav type=pills justified=justified stacked=true as |nav |}}
-  {{#nav.item}}{{#nav.link-to "qacode-form-login"}}Login Form{{/nav.link-to}}{{/nav.item}}
-  {{#nav.item}}{{#nav.link-to "qacode-form-logout"}}Logout Form{{/nav.link-to}}{{/nav.item}}
+<div class="row">
+  <aside class="col-lg-2">
+  {{#bs-nav type=pills justified=justified stacked=true as |nav |}}
+  {{#nav.item}}{{#nav.link-to "qacode.login"}}Login Form{{/nav.link-to}}{{/nav.item}}
+  {{#nav.item}}{{#nav.link-to "qacode.logout"}}Logout Form{{/nav.link-to}}{{/nav.item}}
   {{#nav.dropdown as |dd|}}
     {{#dd.toggle}}Form elements <span class="caret"></span>{{/dd.toggle}}
     {{#dd.menu as |ddm|}}
-      {{#ddm.item}}{{#ddm.link-to "qacode-form-inputs"}}Inputs{{/ddm.link-to}}{{/ddm.item}}
+      {{#ddm.item}}{{#ddm.link-to "qacode.forms.inputs"}}Inputs{{/ddm.link-to}}{{/ddm.item}}
       
     {{/dd.menu}}
   {{/nav.dropdown}}
 {{/bs-nav}}
+</aside>
 
-
-{{outlet}}
+<section class="col-lg-10">
+  {{outlet}}
+</section>
+</div>

@@ -1,0 +1,15 @@
+{{#if logged}}
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">forms</h4>
+  <p>works!</p>
+  <p class="mb-0">like a charm, logged at this point</p>
+</div>
+{{else}}
+  <div class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">forms</h4>
+  <p>Error</p>
+  <p class="mb-0">Please, login first!</p>
+</div>
+{{/if}}
+
+{{outlet}}

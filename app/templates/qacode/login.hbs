@@ -1,0 +1,19 @@
+{{#if logged}}
+<div class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">logout</h4>
+  <p>Error</p>
+  <p class="mb-0">Please, logout first!</p>
+  {{#bs-button onClick=(action "logout")}}
+    Logout
+  {{/bs-button}}
+</div>
+{{else}}
+{{#bs-form formLayout=formLayout model=this as |form|}}
+  {{form.element controlType="text" label="Username" placeholder="User name" property="name" required=true}}
+  {{form.element controlType="password" label="Password" placeholder="Password" property="pass" required=true helpText="Minimum 6 characters"}}
+  {{form.element controlType="checkbox" label="Remember me" property="rememberMe"}}
+  <button id="btnLogin" class="btn btn-primary" {{action "login"}}>Login</button>
+{{/bs-form}}
+{{/if}}
+
+{{outlet}}
