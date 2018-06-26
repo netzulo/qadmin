@@ -1,0 +1,13 @@
+{{#if errored}}
+  <div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">{{titleText}}</h4>
+    <p class="mb-0">{{messageError}}!</p>
+  </div>
+{{else}}
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">{{titleText}}</h4>
+    <p class="mb-0">{{message}}</p>
+  </div>
+{{/if}}
+
+{{yield}}

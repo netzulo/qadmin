@@ -1,15 +1,7 @@
-{{#if logged}}
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">forms</h4>
-  <p>works!</p>
-  <p class="mb-0">like a charm, logged at this point</p>
-</div>
+{{#unless logged}}
+  {{panel-errored errored=true titleText="forms route" messageError="Need to login first" }}
 {{else}}
-  <div class="alert alert-danger" role="alert">
-  <h4 class="alert-heading">forms</h4>
-  <p>Error</p>
-  <p class="mb-0">Please, login first!</p>
-</div>
-{{/if}}
+  {{panel-errored errored=false titleText="forms route" message="working like a charm!" }}
+{{/unless}}
 
 {{outlet}}

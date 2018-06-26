@@ -1,18 +1,11 @@
-{{#if logged}}
-  <div class="alert alert-danger" role="alert">
-  <h4 class="alert-heading">logout</h4>
-  <p>Error</p>
-  <p class="mb-0">Please, logout first!</p>
+{{#unless logged}}
+  {{panel-errored errored=false titleText="logout route" message="working like a charm like a charm because you are not logged!" }}
+{{else}}
+  {{panel-errored errored=false titleText="logout route" message="working like a charm!" }}
   {{#bs-button onClick=(action "logout")}}
     Logout
   {{/bs-button}}
-</div>
-{{else}}
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">logout</h4>
-  <p>works!</p>
-  <p class="mb-0">like a charm because you are not logged</p>
-</div>
-{{/if}}
+{{/unless}}
+
 
 {{outlet}}

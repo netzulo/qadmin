@@ -1,21 +1,11 @@
 {{#unless logged}}
-<div class="alert alert-danger" role="alert">
-  <h4 class="alert-heading">inputs</h4>
-  <p>Error</p>
-  <p class="mb-0">Please, login first!</p>
-</div>
+  {{panel-errored errored=true titleText="inputs route" messageError="Need to login first" }}
 {{else}}
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">inputs</h4>
-  <p>works!</p>
-  <p class="mb-0">like a charm, logged at this point</p>
-</div>
-
-
-{{input-generic title="probando"}}
+  {{panel-errored errored=false titleText="inputs route" message="working like a charm!" }}
+  
+  {{input-generic ids="probando" labelText="Input text 1"}}
+  {{input-generic ids="probando2" labelText="Input text 2" isLabelEnabled="false"}}
 
 {{/unless}}
 
-
-
- {{outlet}}
+{{outlet}}

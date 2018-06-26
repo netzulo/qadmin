@@ -3,13 +3,15 @@
   {{#bs-nav type=pills justified=justified stacked=true as |nav |}}
   {{#nav.item}}{{#nav.link-to "qacode.login"}}Login Form{{/nav.link-to}}{{/nav.item}}
   {{#nav.item}}{{#nav.link-to "qacode.logout"}}Logout Form{{/nav.link-to}}{{/nav.item}}
-  {{#nav.dropdown as |dd|}}
-    {{#dd.toggle}}Form elements <span class="caret"></span>{{/dd.toggle}}
-    {{#dd.menu as |ddm|}}
-      {{#ddm.item}}{{#ddm.link-to "qacode.forms.inputs"}}Inputs{{/ddm.link-to}}{{/ddm.item}}
-      
-    {{/dd.menu}}
-  {{/nav.dropdown}}
+  {{#if logged}}
+    {{#nav.dropdown as |dd|}}
+      {{#dd.toggle}}Form elements <span class="caret"></span>{{/dd.toggle}}
+      {{#dd.menu as |ddm|}}
+        {{#ddm.item}}{{#ddm.link-to "qacode.forms.inputs"}}Inputs{{/ddm.link-to}}{{/ddm.item}}
+        
+      {{/dd.menu}}
+    {{/nav.dropdown}}
+  {{/if}}
 {{/bs-nav}}
 </aside>
 
