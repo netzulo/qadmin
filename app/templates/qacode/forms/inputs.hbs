@@ -3,8 +3,15 @@
 {{else}}
   {{panel-errored errored=false titleText="inputs route" message="working like a charm!" }}
   
-  {{input-generic ids="probando" labelText="Input text 1"}}
-  {{input-generic ids="probando2" labelText="Input text 2" isLabelEnabled="false"}}
+  <h3 class="col-lg-12 text-center">Inputs</h3>
+  {{input-generic ids="test001" labelText="Input text 1"}}
+
+  <h3 class="col-lg-12 text-center">Dropdowns</h3>
+  {{dropdown-generic ids="test002" labelText="Input text 2"}}
+
+  <h4 class="col-lg-12 text-center">Dropdowns</h4>
+  <p class="col-lg-12 text-center"><i>with ember-bootstrap components</i></p>
+  {{dropdown-bs}}
 
 {{/unless}}
 

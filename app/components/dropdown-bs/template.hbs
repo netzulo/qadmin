@@ -1,0 +1,43 @@
+{{#bs-dropdown class="col-lg-12" as |dd|}}
+  {{#dd.button class="btn btn-info"}}Dropdown <span class="caret"></span>{{/dd.button}}
+  {{#dd.menu as |menu|}}
+    {{#menu.item}}
+      {{#menu.link-to "qacode.forms"}}Link 2.1{{/menu.link-to}}
+    {{/menu.item}}
+    {{#menu.item}}
+      {{#menu.link-to "qacode.forms"}}Link 2.2{{/menu.link-to}}
+    {{/menu.item}}
+  {{/dd.menu}}
+{{/bs-dropdown}}
+
+<hr />
+
+{{#bs-dropdown class="col-lg-12" direction="up" as |dd|}}
+  {{#dd.toggle class="btn btn-primary"}}Dropup <span class="caret"></span>{{/dd.toggle}}
+  {{#dd.menu align="right" as |menu|}}
+    {{#menu.item}}
+      {{#menu.link-to "qacode.forms"}}Link 3.1{{/menu.link-to}}
+    {{/menu.item}}
+    {{menu.divider}}
+    {{#menu.item}}
+      {{#menu.link-to "qacode.forms"}}Link 3.2{{/menu.link-to}}
+    {{/menu.item}}
+  {{/dd.menu}}
+{{/bs-dropdown}}
+
+<hr />
+
+{{#bs-dropdown class="col-lg-12" as |dd|}}
+  {{#bs-button class="btn btn-warning"}}Dropdown with double button{{/bs-button}}
+  {{#dd.button class="btn btn-danger"}}<span class="caret"></span>{{/dd.button}}
+  {{#dd.menu as |menu|}}
+    {{#menu.item}}
+      {{#menu.link-to "qacode.forms"}}Link 4.1{{/menu.link-to}}
+    {{/menu.item}}
+    {{#menu.item}}
+      {{#menu.link-to "qacode.forms"}}Link 4.2{{/menu.link-to}}
+    {{/menu.item}}
+  {{/dd.menu}}
+{{/bs-dropdown}}
+
+{{yield}}
