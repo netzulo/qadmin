@@ -1,0 +1,9 @@
+{{#each elements as |chk|}}
+<div class="chkGroup col-lg-6">
+    {{input id=chk.idInput class="form-control" type="checkbox" name="option1" placeholder=chk.title }}
+    <label id={{chk.idLabel}} for={{chk.idInput}}>
+        {{chk.labelText}}
+    </label>
+</div>
+{{/each}}
+{{yield}}
