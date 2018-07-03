@@ -5,9 +5,9 @@
 
 #### CIs for linux/windows
 
-Branch | Linux Deploy | Windows Deploy
------- | ------------ | --------------
-master | ![](https://travis-ci.org/netzulo/qadmin.svg?branch=master) | ![](https://ci.appveyor.com/api/projects/status/qrb3o3qdeg3qv9eq/branch/master?svg=true)
+Branch | Travis | Appveyor | CircleCI | CodeClimate
+------ | ------ | -------- | -------- | -----------
+master | ![](https://travis-ci.org/netzulo/qadmin.svg?branch=master) | ![](https://ci.appveyor.com/api/projects/status/qrb3o3qdeg3qv9eq/branch/master?svg=true) | ![](https://circleci.com/gh/netzulo/qadmin.svg?&style=shield&circle-token=57ba32cda619d90224450266ffc417b3f8bb6fb1ef7d1ccb28b365060298c19a) | [![Maintainability](https://api.codeclimate.com/v1/badges/7018b4a331e5ed5c5d4d/maintainability)](https://codeclimate.com/github/netzulo/qadmin/maintainability)
 
 #### Code Metrics by sonarqube
 

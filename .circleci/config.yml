@@ -1,0 +1,40 @@
+# NodeJS CircleCI 2.0 configuration file
+version: 2
+jobs:
+  build:
+    environment:
+      CC_TEST_REPORTER_ID: 57ba32cda619d90224450266ffc417b3f8bb6fb1ef7d1ccb28b365060298c19a
+    docker:
+      - image: circleci/node:8.11.3-browsers
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            # CI, CircleCI dependencies
+            # CI, codeclimate dependencies
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Install project
+          command: |
+            npm install
+      - run:
+          name: Before Tests
+          command: |
+            ./cc-test-reporter before-build
+      - run:
+          name: Run Tests
+          command: |
+            npm test
+      - run:
+          name: After Tests
+          command: |
+            npm run lint:js
+            ./cc-test-reporter after-build --exit-code $?
+      - store_artifacts:
+          path: dist
+          destination: dist
