@@ -24,17 +24,10 @@ addons:
 cache:
   directories:
     - $HOME/.npm
-
-env:
-  global:
-    # See https://git.io/vdao3 for details.
-    - JOBS=1
-
 before_install:
   - npm config set spin false
 intall:
   - npm install
-  - npm run lint:js
   - npm run build
 before_script:
 - node --version
@@ -42,8 +35,10 @@ before_script:
 script:
   - npm test
 after_script:
+- npm run lint:html
+- npm run lint:xml
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
-      sonar-scanner -X -Dsonar.login=${SONAR_GITHUB_TOKEN} -Dsonar.host.url=http://qalab.tk:82 ;
+      sonar-scanner -X -Dsonar.login=${SONAR_GITHUB_TOKEN} -Dsonar.host.url=http://ntz-qa.tk:82 ;
   else
-      sonar-scanner -X -Dsonar.login=${SONAR_GITHUB_TOKEN} -Dsonar.host.url=http://qalab.tk:82 -Dsonar.github.repository=netzulo/qadmin -Dsonar.github.pullRequest=${TRAVIS_PULL_REQUEST} -Dsonar.github.oauth=${GITHUB_TOKEN} -Dsonar.analysis.mode=preview ;
+      sonar-scanner -X -Dsonar.login=${SONAR_GITHUB_TOKEN} -Dsonar.host.url=http://ntz-qa.tk:82 -Dsonar.github.repository=netzulo/qadmin -Dsonar.github.pullRequest=${TRAVIS_PULL_REQUEST} -Dsonar.github.oauth=${GITHUB_TOKEN} -Dsonar.analysis.mode=preview ;
   fi

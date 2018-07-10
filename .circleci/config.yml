@@ -16,8 +16,11 @@ jobs:
           command: |
             # CI, CircleCI dependencies
             # CI, codeclimate dependencies
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
+            npm install -g codeclimate-test-reporter
+      - run:
+          name: Pre-Install project
+          command: |
+            rm -rf node_modules/
       - run:
           name: Install project
           command: |
@@ -33,8 +36,9 @@ jobs:
       - run:
           name: After Tests
           command: |
-            npm run lint:js
-            ./cc-test-reporter after-build --exit-code $?
+            npm run lint:html
+            npm run lint:xml
+            # CODECLIMATE_REPO_TOKEN=$CC_TEST_REPORTER_ID codeclimate-test-reporter < tests/reports/coverage-lcov.info
       - store_artifacts:
           path: dist
           destination: dist

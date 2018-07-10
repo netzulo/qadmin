@@ -46,3 +46,7 @@ package-lock.json
 
 # Visual code files
 .vscode
+
+# QADMIN
+tests/reports/eslint.html
+tests/reports/eslint.xml

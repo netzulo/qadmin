@@ -5,7 +5,6 @@ export default Route.extend({
     init(){
         this._super(...arguments);
         this.set('logged', false);
-        this.set('')
     },
     model() {
         return {

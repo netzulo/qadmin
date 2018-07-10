@@ -89,6 +89,10 @@ server {
        include snippets/self-signed.conf;
        include snippets/ssl-params.conf;
        root /your/path/dist;
+       index index.html;
+       location / { 
+          try_files $uri $uri/ /index.html;
+       }
 }
 ```
 
