@@ -9,16 +9,6 @@ Branch | Travis | Appveyor | CircleCI | CodeClimate
 ------ | ------ | -------- | -------- | -----------
 master | ![](https://travis-ci.org/netzulo/qadmin.svg?branch=master) | ![](https://ci.appveyor.com/api/projects/status/qrb3o3qdeg3qv9eq/branch/master?svg=true) | ![](https://circleci.com/gh/netzulo/qadmin.svg?&style=shield&circle-token=57ba32cda619d90224450266ffc417b3f8bb6fb1ef7d1ccb28b365060298c19a) | [![Maintainability](https://api.codeclimate.com/v1/badges/7018b4a331e5ed5c5d4d/maintainability)](https://codeclimate.com/github/netzulo/qadmin/maintainability)
 
-#### Code Metrics by sonarqube
-
-![Quality Gate](http://qalab.tk:82/api/badges/gate?key=qadmin)
-![Lines](http://qalab.tk:82/api/badges/measure?key=qadmin&metric=lines)
-![Bugs](http://qalab.tk:82/api/badges/measure?key=qadmin&metric=bugs)
-![Vulnerabilities](http://qalab.tk:82/api/badges/measure?key=qadmin&metric=vulnerabilities)
-![Code Smells](http://qalab.tk:82/api/badges/measure?key=qadmin&metric=code_smells)
-![Debt ratio](http://qalab.tk:82/api/badges/measure?key=qadmin&metric=sqale_debt_ratio)
-![Comments](http://qalab.tk:82/api/badges/measure?key=qadmin&metric=comment_lines_density)
-
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
