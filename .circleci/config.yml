@@ -16,7 +16,7 @@ jobs:
           command: |
             # CI, CircleCI dependencies
             # CI, codeclimate dependencies
-            npm install -g codeclimate-test-reporter
+            sudo npm install -g codeclimate-test-reporter
       - run:
           name: Pre-Install project
           command: |
@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Before Tests
           command: |
-            ./cc-test-reporter before-build
+            # ./cc-test-reporter before-build
       - run:
           name: Run Tests
           command: |
@@ -38,7 +38,7 @@ jobs:
           command: |
             npm run lint:html
             npm run lint:xml
-            # CODECLIMATE_REPO_TOKEN=$CC_TEST_REPORTER_ID codeclimate-test-reporter < tests/reports/coverage-lcov.info
+            # sudo CODECLIMATE_REPO_TOKEN=$CC_TEST_REPORTER_ID codeclimate-test-reporter < tests/reports/coverage-lcov.info
       - store_artifacts:
           path: dist
           destination: dist

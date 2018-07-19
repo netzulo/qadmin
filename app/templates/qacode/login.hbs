@@ -1,13 +1,13 @@
 {{#if logged}}
   {{panel-errored logged=logged titleText="login route" message="are you looking for logout button?" }}
-  {{#bs-button onClick=(action "logout")}}
+  {{#bs-button id="btn-logout" onClick=(action "logout")}}
     Logout
   {{/bs-button}}
 {{else}}
-  {{#bs-form formLayout=formLayout model=this as |form|}}
-    {{form.element controlType="text" label="Username" placeholder="User name" property="name" required=true}}
-    {{form.element controlType="password" label="Password" placeholder="Password" property="pass" required=true helpText="Minimum 6 characters"}}
-    {{form.element controlType="checkbox" label="Remember me" property="rememberMe"}}
+  {{#bs-form id="frmLogin" formLayout=formLayout model=this as |form|}}
+    {{form.element id="txtUsername" controlType="text" label="Username" placeholder="User name" property="name" required=true}}
+    {{form.element id="txtPassword" controlType="password" label="Password" placeholder="Password" property="pass" required=true helpText="Minimum 6 characters"}}
+    {{form.element id="chkRemember" controlType="checkbox" label="Remember me" property="rememberMe"}}
     <button id="btnLogin" class="btn btn-primary" {{action "login"}}>Login</button>
   {{/bs-form}}
 {{/if}}
