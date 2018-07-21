@@ -1,6 +1,21 @@
 <label id={{idLabel}} class="col-lg-2" for={{idInput}}>
   {{labelText}}
 </label>
+{{#if isMultiple}}
+<select id={{idInput}} class="form-control col-lg-10" multiple="multiple">
+  <option value="0" selected="selected">{{defaultText}}</option>
+  <optgroup label="Sub Elements list">
+    <option value="1">Link 1.1</option>
+    <option value="2">Link 1.2</option>  
+  </optgroup>
+  <option value="1">Link 1.1</option>
+  <option value="2">Link 1.2</option>
+  <optgroup label="Sub Elements list" disabled="disabled">
+    <option value="1">Link 1.1</option>
+    <option value="2">Link 1.2</option>  
+  </optgroup>
+</select>
+{{else}}
 <select id={{idInput}} class="form-control col-lg-10">
   <option value="0" selected="selected">{{defaultText}}</option>
   <optgroup label="Sub Elements list">
@@ -14,5 +29,6 @@
     <option value="2">Link 1.2</option>  
   </optgroup>
 </select>
+{{/if}}
 
 {{yield}}

@@ -8,6 +8,7 @@ export default Component.extend({
   idLabel: null, // internal
   idInput: null, // internal
   defaultText: 'Select an option',
+  isMultiple: null,
   init() {
     this._super(...arguments);
     if(this.get('ids') !== null) {
@@ -17,6 +18,9 @@ export default Component.extend({
     this.set('labelText', this.get('labelText'));
     if (this.get('defaultText') !== null) {
       this.set('defaultText', this.get('defaultText'));
+    }
+    if (this.get('isMultiple') !== null) {
+      this.set('isMultiple', this.get('isMultiple'));
     }
   }
 });
