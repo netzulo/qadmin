@@ -5,16 +5,20 @@
   {{#nav.item}}{{#nav.link-to "qacode.logout"}}Logout Form{{/nav.link-to}}{{/nav.item}}
   {{#if logged}}
     {{#nav.dropdown as |dd|}}
-      {{#dd.toggle}}Form elements <span class="caret"></span>{{/dd.toggle}}
-      {{#dd.menu as |ddm|}}
+      {{#dd.toggle id="ddForm"}}Form elements <span class="caret"></span>{{/dd.toggle}}
+      {{#dd.menu id="menuInputs" as |ddm|}}
         {{#ddm.item}}{{#ddm.link-to "qacode.forms.inputs"}}Inputs{{/ddm.link-to}}{{/ddm.item}}
-        
+      {{/dd.menu}}
+    {{/nav.dropdown}}
+    {{#nav.dropdown as |dd|}}
+      {{#dd.toggle id="ddData"}}Data elements <span class="caret"></span>{{/dd.toggle}}
+      {{#dd.menu as |ddm|}}
+        {{#ddm.item}}{{#ddm.link-to "qacode.data.lists"}}Lists{{/ddm.link-to}}{{/ddm.item}}
       {{/dd.menu}}
     {{/nav.dropdown}}
   {{/if}}
 {{/bs-nav}}
 </aside>
-
 <section class="col-lg-10">
   {{outlet}}
 </section>

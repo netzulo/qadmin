@@ -1,0 +1,42 @@
+{{#unless logged}}
+  {{panel-errored errored=true titleText="data route" messageError="Need to login first" }}
+{{else}}
+  {{panel-errored errored=false titleText="data route" message="working like a charm!" }}
+  
+  <h3 class="col-lg-12 text-center">Ordered Lists</h3>
+  <div class="col-lg-12">
+    <ol id="lstOrdered01">
+      <li id="li01">Item list01</li>
+      <li id="li02">Item list02</li>
+      <li id="li03">Item list03</li>
+      <li id="li04">Item list04</li>
+      <li id="li05">Item list05</li>
+    </ol>
+    <ol id="lstOrdered02">
+      <li id="li01">Item list11</li>
+      <li id="li02">Item list12</li>
+      <li id="li03">Item list13</li>
+      <li id="li04">Item list14</li>
+      <li id="li05">Item list15</li>
+    </ol>
+  </div>
+  <h3 class="col-lg-12 text-center">Unordered Lists</h3>
+  <div class="col-lg-12">
+    <ul id="lstUnrdered01">
+      <li id="li01">Item list01</li>
+      <li id="li02">Item list02</li>
+      <li id="li03">Item list03</li>
+      <li id="li04">Item list04</li>
+      <li id="li05">Item list05</li>
+    </ul>
+    <ul id="lstUnrdered02">
+      <li id="li01">Item list11</li>
+      <li id="li02">Item list12</li>
+      <li id="li03">Item list13</li>
+      <li id="li04">Item list14</li>
+      <li id="li05">Item list15</li>
+    </ul>
+  </div>
+{{/unless}}
+
+{{outlet}}

@@ -14,6 +14,9 @@ Router.map(function() {
     this.route('forms', function() {
       this.route('inputs');
     });
+    this.route('data', function() {
+      this.route('lists');
+    });
   });
   this.route('qalab');
   this.route('not-found', { path: '/*path' });
