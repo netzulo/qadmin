@@ -28,6 +28,24 @@
   <h4 class="col-lg-12 text-center">Radio</h4>
   <p class="col-lg-12 text-center"><i>with ember-bootstrap components</i></p>
   {{radio-bs}}
+
+  <h4 id="titleButtons" class="col-lg-12 text-center">Buttons</h4>
+  <script>
+    function clicker_waits() {
+      setTimeout(function(){ document.getElementById('btnInvisibleAtTimeout').style.display = 'none'; }, 2500);
+      setTimeout(function(){ document.getElementById('btnVisibleAtTimeout').style.display = 'initial'; }, 2500);
+      setTimeout(function(){
+        let ele = document.getElementById('btnInvisibleAtTimeout');
+        ele.style.display = 'initial';
+        ele.value = "bad_text";
+      }, 5000);
+      setTimeout(function(){ document.getElementById('titleButtons').innerText = "Buttonss"; }, 5000);
+    }
+  </script>
+  <input id="btnInvisibleAtTimeout" class="col-lg-4 btn btn-warning" type="button" onclick="clicker_waits()" value="Invisible at timeout button" />
+  <input id="btnVisibleAtTimeout" class="col-lg-4 btn btn-success" style="display:none;" type="button" value="Visible at timeout button" />
+  <hr>
+
 {{/unless}}
 
 {{outlet}}
